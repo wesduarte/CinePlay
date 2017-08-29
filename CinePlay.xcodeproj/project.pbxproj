@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B254C091F55DBE2004BDC05 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C081F55DBE2004BDC05 /* LoginViewController.swift */; };
+		2B254C0E1F55DF78004BDC05 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */; };
 		2B311F2B1F53DA9200DC8B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B311F2A1F53DA9200DC8B04 /* AppDelegate.swift */; };
-		2B311F2D1F53DA9200DC8B04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B311F2C1F53DA9200DC8B04 /* ViewController.swift */; };
 		2B311F301F53DA9200DC8B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B311F2E1F53DA9200DC8B04 /* Main.storyboard */; };
 		2B311F321F53DA9200DC8B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B311F311F53DA9200DC8B04 /* Assets.xcassets */; };
 		2B311F351F53DA9200DC8B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B311F331F53DA9200DC8B04 /* LaunchScreen.storyboard */; };
 		2B311F401F53DA9200DC8B04 /* CinePlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B311F3F1F53DA9200DC8B04 /* CinePlayTests.swift */; };
+		9095F269B86D5AF22A1D44C6 /* Pods_CinePlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A342205C19CC9C5E4F5F92 /* Pods_CinePlay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B254C081F55DBE2004BDC05 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieTableViewCell.swift; path = Views/MovieTableViewCell.swift; sourceTree = "<group>"; };
 		2B311F271F53DA9200DC8B04 /* CinePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B311F2A1F53DA9200DC8B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B311F2C1F53DA9200DC8B04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2B311F2F1F53DA9200DC8B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B311F311F53DA9200DC8B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B311F341F53DA9200DC8B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		2B311F3B1F53DA9200DC8B04 /* CinePlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CinePlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B311F3F1F53DA9200DC8B04 /* CinePlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinePlayTests.swift; sourceTree = "<group>"; };
 		2B311F411F53DA9200DC8B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C220C02942B8D2441E658D4 /* Pods-CinePlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinePlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-CinePlay/Pods-CinePlay.release.xcconfig"; sourceTree = "<group>"; };
+		76A342205C19CC9C5E4F5F92 /* Pods_CinePlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinePlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5860CCE8DE74588B03D582A /* Pods-CinePlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinePlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CinePlay/Pods-CinePlay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9095F269B86D5AF22A1D44C6 /* Pods_CinePlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +63,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B254C0C1F55DF5E004BDC05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2B254C0F1F55DFD2004BDC05 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2B254C101F55DFDD004BDC05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		2B311F1E1F53DA9100DC8B04 = {
 			isa = PBXGroup;
 			children = (
 				2B311F291F53DA9200DC8B04 /* CinePlay */,
 				2B311F3E1F53DA9200DC8B04 /* CinePlayTests */,
 				2B311F281F53DA9200DC8B04 /* Products */,
+				4ABFC1573B30492441D12718 /* Pods */,
+				C09B68FA115A48667D27BB7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +108,11 @@
 		2B311F291F53DA9200DC8B04 /* CinePlay */ = {
 			isa = PBXGroup;
 			children = (
+				2B254C101F55DFDD004BDC05 /* Models */,
+				2B254C0F1F55DFD2004BDC05 /* Controllers */,
+				2B254C0C1F55DF5E004BDC05 /* Views */,
 				2B311F2A1F53DA9200DC8B04 /* AppDelegate.swift */,
-				2B311F2C1F53DA9200DC8B04 /* ViewController.swift */,
+				2B254C081F55DBE2004BDC05 /* LoginViewController.swift */,
 				2B311F2E1F53DA9200DC8B04 /* Main.storyboard */,
 				2B311F311F53DA9200DC8B04 /* Assets.xcassets */,
 				2B311F331F53DA9200DC8B04 /* LaunchScreen.storyboard */,
@@ -96,6 +130,23 @@
 			path = CinePlayTests;
 			sourceTree = "<group>";
 		};
+		4ABFC1573B30492441D12718 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5860CCE8DE74588B03D582A /* Pods-CinePlay.debug.xcconfig */,
+				2C220C02942B8D2441E658D4 /* Pods-CinePlay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C09B68FA115A48667D27BB7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76A342205C19CC9C5E4F5F92 /* Pods_CinePlay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B311F441F53DA9200DC8B04 /* Build configuration list for PBXNativeTarget "CinePlay" */;
 			buildPhases = (
+				A7BE127FBC86F2F67846F568 /* [CP] Check Pods Manifest.lock */,
 				2B311F231F53DA9200DC8B04 /* Sources */,
 				2B311F241F53DA9200DC8B04 /* Frameworks */,
 				2B311F251F53DA9200DC8B04 /* Resources */,
+				F06C944ED100D072723C1CFB /* [CP] Embed Pods Frameworks */,
+				6D5C4B5605B56D4A6CD98045 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,13 +248,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D5C4B5605B56D4A6CD98045 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CinePlay/Pods-CinePlay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7BE127FBC86F2F67846F568 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CinePlay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F06C944ED100D072723C1CFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CinePlay/Pods-CinePlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B311F231F53DA9200DC8B04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B311F2D1F53DA9200DC8B04 /* ViewController.swift in Sources */,
+				2B254C091F55DBE2004BDC05 /* LoginViewController.swift in Sources */,
 				2B311F2B1F53DA9200DC8B04 /* AppDelegate.swift in Sources */,
+				2B254C0E1F55DF78004BDC05 /* MovieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +445,7 @@
 		};
 		2B311F451F53DA9200DC8B04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5860CCE8DE74588B03D582A /* Pods-CinePlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CinePlay/Info.plist;
@@ -351,6 +458,7 @@
 		};
 		2B311F461F53DA9200DC8B04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C220C02942B8D2441E658D4 /* Pods-CinePlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CinePlay/Info.plist;
@@ -408,6 +516,7 @@
 				2B311F461F53DA9200DC8B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B311F471F53DA9200DC8B04 /* Build configuration list for PBXNativeTarget "CinePlayTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +525,7 @@
 				2B311F491F53DA9200DC8B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
