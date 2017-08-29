@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B254C091F55DBE2004BDC05 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C081F55DBE2004BDC05 /* LoginViewController.swift */; };
 		2B254C0E1F55DF78004BDC05 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */; };
+		2B254C121F55E639004BDC05 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C111F55E639004BDC05 /* Movie.swift */; };
 		2B311F2B1F53DA9200DC8B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B311F2A1F53DA9200DC8B04 /* AppDelegate.swift */; };
 		2B311F301F53DA9200DC8B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B311F2E1F53DA9200DC8B04 /* Main.storyboard */; };
 		2B311F321F53DA9200DC8B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B311F311F53DA9200DC8B04 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		2B254C081F55DBE2004BDC05 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieTableViewCell.swift; path = Views/MovieTableViewCell.swift; sourceTree = "<group>"; };
+		2B254C111F55E639004BDC05 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2B311F271F53DA9200DC8B04 /* CinePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B311F2A1F53DA9200DC8B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B311F2F1F53DA9200DC8B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		2B254C101F55DFDD004BDC05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2B254C111F55E639004BDC05 /* Movie.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				2B254C091F55DBE2004BDC05 /* LoginViewController.swift in Sources */,
 				2B311F2B1F53DA9200DC8B04 /* AppDelegate.swift in Sources */,
+				2B254C121F55E639004BDC05 /* Movie.swift in Sources */,
 				2B254C0E1F55DF78004BDC05 /* MovieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
