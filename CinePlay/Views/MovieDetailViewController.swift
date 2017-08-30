@@ -10,14 +10,22 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
-
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var thumb: UIImageView!
     @IBOutlet weak var sinopse: UILabel!
     
+    var titleString:String!
+    var thumbImage:UIImage!
+    var subtitleString:String!
+    var sinopseString:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelTitle.text = titleString
+        subtitle.text = subtitleString
+        sinopse.text = sinopseString
+        thumb.image = thumbImage
 
         // Do any additional setup after loading the view.
     }

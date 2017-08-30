@@ -181,5 +181,29 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let row = indexPath.row
+        let movie_dict =  self.moviesArray[row]
+        
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Storyboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
+        
+        let thumb = movie_dict["thumb"] as! String
+        let imgURL = NSURL(string: thumb)
+        debugPrint(imgURL)
+        if imgURL != nil {
+            let data = NSData(contentsOf: (imgURL as? URL)!)
+            vc.thumbImage = UIImage(data: data as! Data)
+        }
+        vc.titleString = movie_dict["title"] as! String
+        vc.subtitleString = movie_dict["subtitle"] as! String
+        vc.sinopseString = movie_dict["sinopse"] as! String
+        
+        
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
 }
