@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1712DE1F5655B200B48823 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1712DD1F5655B200B48823 /* MovieListViewController.swift */; };
 		2B254C091F55DBE2004BDC05 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C081F55DBE2004BDC05 /* LoginViewController.swift */; };
 		2B254C0E1F55DF78004BDC05 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */; };
 		2B254C121F55E639004BDC05 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C111F55E639004BDC05 /* Movie.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B1712DD1F5655B200B48823 /* MovieListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		2B254C081F55DBE2004BDC05 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieTableViewCell.swift; path = Views/MovieTableViewCell.swift; sourceTree = "<group>"; };
 		2B254C111F55E639004BDC05 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 		2B254C0F1F55DFD2004BDC05 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B254C081F55DBE2004BDC05 /* LoginViewController.swift */,
+				2B1712DD1F5655B200B48823 /* MovieListViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -115,7 +119,6 @@
 				2B254C0F1F55DFD2004BDC05 /* Controllers */,
 				2B254C0C1F55DF5E004BDC05 /* Views */,
 				2B311F2A1F53DA9200DC8B04 /* AppDelegate.swift */,
-				2B254C081F55DBE2004BDC05 /* LoginViewController.swift */,
 				2B311F2E1F53DA9200DC8B04 /* Main.storyboard */,
 				2B311F311F53DA9200DC8B04 /* Assets.xcassets */,
 				2B311F331F53DA9200DC8B04 /* LaunchScreen.storyboard */,
@@ -291,9 +294,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CinePlay/Pods-CinePlay-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -308,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B254C091F55DBE2004BDC05 /* LoginViewController.swift in Sources */,
+				2B1712DE1F5655B200B48823 /* MovieListViewController.swift in Sources */,
 				2B311F2B1F53DA9200DC8B04 /* AppDelegate.swift in Sources */,
 				2B254C121F55E639004BDC05 /* Movie.swift in Sources */,
 				2B254C0E1F55DF78004BDC05 /* MovieTableViewCell.swift in Sources */,
