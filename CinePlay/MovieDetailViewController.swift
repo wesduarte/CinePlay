@@ -2,37 +2,49 @@
 //  MovieDetailViewController.swift
 //  CinePlay
 //
-//  Created by wesley on 30/08/17.
+//  Created by wesley on 31/08/17.
 //  Copyright © 2017 wesley. All rights reserved.
 //
 
 import UIKit
 
 class MovieDetailViewController: UIViewController {
-
-    @IBOutlet weak var labelTitle: UILabel!
-    @IBOutlet weak var subtitle: UILabel!
-    @IBOutlet weak var thumb: UIImageView!
-    @IBOutlet weak var sinopse: UILabel!
     
-    var titleString:String!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var sinopseLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var thumbLabel: UIImageView!
+
+    
+    var titleText:String!
+    
+    var subtitleText:String!
+    
+    var sinopseText:String!
+    
+    var durationText:String!
+    
     var thumbImage:UIImage!
-    var subtitleString:String!
-    var sinopseString:String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelTitle.text = titleString
-        subtitle.text = subtitleString
-        sinopse.text = sinopseString
-        thumb.image = thumbImage
-
-        // Do any additional setup after loading the view.
+        loadUIContent()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadUIContent() {
+        self.titleLabel.text = self.titleText
+        self.subtitleLabel.text = self.subtitleText
+        self.sinopseLabel.text = self.sinopseText
+        self.durationLabel.text = self.durationText
+        self.thumbLabel.image = self.thumbImage
+        
     }
     
 
@@ -45,5 +57,6 @@ class MovieDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
