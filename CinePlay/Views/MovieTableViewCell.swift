@@ -18,9 +18,8 @@ class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sinopse: UILabel!
     @IBOutlet weak var duration: UILabel!
-
-
-
+    
+    var id: Int64!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,4 +32,9 @@ class MovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func addFavorite(_ sender: UIButton) {
+        
+        var result = CinePlayDB.instance.addFavorite(fmovie_id: self.id)
+
+    }
 }
