@@ -85,17 +85,10 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //let row = indexPath.row
-        //let movie_dict =  self.moviesArray[row]
         let currentMovieCell = tableView.cellForRow(at: indexPath)! as! MovieTableViewCell
         
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)
         let movieDetailView = Storyboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
-        
-
-        //vc.titleText = movie_dict["title"] as! String
-        //vc.subtitleText = movie_dict["subtitle"] as! String
-        //vc.sinopseText = movie_dict["sinopse"] as! String
         
         movieDetailView.titleText = currentMovieCell.title?.text
         movieDetailView.subtitleText = currentMovieCell.subtitle?.text
