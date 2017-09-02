@@ -10,7 +10,7 @@ import SQLite
 
 class CinePlayDB {
     
-    let favorites = Table("favorites")
+    private let favorites = Table("favorites")
     private let id = Expression<Int64>("id")
     private let movie_id = Expression<Int64>("movie_id")
     
@@ -71,9 +71,9 @@ class CinePlayDB {
         return favorites
     }
     
-    func deletefavorite(cid: Int64) -> Bool {
+    func deletefavorite(fmovie_id: Int64) -> Bool {
         do {
-            let favorite = favorites.filter(id == cid)
+            let favorite = favorites.filter(movie_id == fmovie_id)
             try db!.run(favorite.delete())
             return true
         } catch {
