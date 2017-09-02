@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B20BECA1F5A7571001964B7 /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20BEC91F5A7571001964B7 /* MoviesApi.swift */; };
+		2B20BECC1F5A7F57001964B7 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20BECB1F5A7F57001964B7 /* FavoriteTableViewCell.swift */; };
 		2B254C0E1F55DF78004BDC05 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */; };
 		2B311F2B1F53DA9200DC8B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B311F2A1F53DA9200DC8B04 /* AppDelegate.swift */; };
 		2B311F301F53DA9200DC8B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B311F2E1F53DA9200DC8B04 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B20BEC91F5A7571001964B7 /* MoviesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesApi.swift; path = Controllers/MoviesApi.swift; sourceTree = "<group>"; };
+		2B20BECB1F5A7F57001964B7 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteTableViewCell.swift; path = Views/FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieTableViewCell.swift; path = Views/MovieTableViewCell.swift; sourceTree = "<group>"; };
 		2B311F271F53DA9200DC8B04 /* CinePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B311F2A1F53DA9200DC8B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				2B254C0D1F55DF78004BDC05 /* MovieTableViewCell.swift */,
+				2B20BECB1F5A7F57001964B7 /* FavoriteTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 				2B525A711F59A9F30098E149 /* MovieListViewController.swift */,
 				2B525A721F59A9F30098E149 /* FavoriteViewController.swift */,
 				2B525A731F59A9F30098E149 /* LoginViewController.swift */,
+				2B20BEC91F5A7571001964B7 /* MoviesApi.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B525A771F59A9F30098E149 /* LoginViewController.swift in Sources */,
+				2B20BECA1F5A7571001964B7 /* MoviesApi.swift in Sources */,
 				2B525A791F59AA170098E149 /* cineappdatabase.swift in Sources */,
 				2B311F2B1F53DA9200DC8B04 /* AppDelegate.swift in Sources */,
 				2B254C0E1F55DF78004BDC05 /* MovieTableViewCell.swift in Sources */,
@@ -350,6 +357,7 @@
 				2B525A741F59A9F30098E149 /* MovieDetailViewController.swift in Sources */,
 				2B525A761F59A9F30098E149 /* FavoriteViewController.swift in Sources */,
 				2B525A6E1F59A9D70098E149 /* favorite.swift in Sources */,
+				2B20BECC1F5A7F57001964B7 /* FavoriteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

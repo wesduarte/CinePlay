@@ -7,15 +7,41 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class FavoriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var favoriteMoviesArray = [[String:AnyObject]]()
+    final let MOVIES_URL = "https://my-json-server.typicode.com/wesleymuniz/mediaapi/db"
+    final let MOVIE_URL = "https://my-json-server.typicode.com/wesleymuniz/mediaapi/movies/"
+    
+    var favoriteMoviesArray = [JSON]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getMoviesJSON()
+    }
+    
+    func getMoviesJSON(){
+        
+        let favorites = CinePlayDB.instance.getFavorites();
+        
+        for favorite in favorites {
+            let MOVIE_URL_ID = "\(self.MOVIE_URL)\(favorite.movie_id)"
+            Alamofire.request(MOVIE_URL_ID).responseJSON { (responseData) -> Void in
+                if((responseData.result.value) != nil) {
+                    let resData = JSON(responseData.result.value!)
+                    self.favoriteMoviesArray.append(resData)
+                }
+
+                if self.favoriteMoviesArray.count > 0 {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,47 +57,34 @@ class FavoriteViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FavoriteTableViewCell
         
         let row = indexPath.row
         let movie_dict =  self.favoriteMoviesArray[row]
-        let title = movie_dict["title"] as! String
+        let title = movie_dict["title"].string!
         cell.title.text = title
         
-        let subtitle = movie_dict["subtitle"] as! String
+        let subtitle = movie_dict["subtitle"].string!
         cell.subtitle.text = subtitle
         
-        let duration = String(format: "%@", movie_dict["duration"] as! CVarArg)
+        let duration = movie_dict["duration"].int!
         cell.duration.text = "\(duration)min"
         
-        let sinopse = movie_dict["sinopse"] as! String
+        let sinopse = movie_dict["sinopse"].string!
         cell.sinopse.text = sinopse
         
-        let thumb = movie_dict["thumb"] as! String
+        let thumb = movie_dict["thumb"].string!
         let imgURL = NSURL(string: thumb)
         if imgURL != nil {
             let data = NSData(contentsOf: (imgURL as? URL)!)
             cell.thumb.image = UIImage(data: data as! Data)
         }
         
+        cell.parentTableView = self.tableView
+        
+        cell.id = movie_dict["id"].int64!
+                
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let currentMovieCell = tableView.cellForRow(at: indexPath)! as! MovieTableViewCell
-        
-        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let movieDetailView = Storyboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
-        
-        movieDetailView.titleText = currentMovieCell.title?.text
-        movieDetailView.subtitleText = currentMovieCell.subtitle?.text
-        movieDetailView.sinopseText = currentMovieCell.sinopse?.text
-        movieDetailView.thumbImage = currentMovieCell.thumb?.image
-        
-        
-        self.navigationController?.pushViewController(movieDetailView, animated: true)
-    }
-
 
 }
