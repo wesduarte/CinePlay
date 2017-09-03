@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pQV-bY-AAO">
-                                <rect key="frame" x="16" y="40" width="288" height="211"/>
+                                <rect key="frame" x="16" y="40" width="288" height="171"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32Q-k7-mma">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
@@ -58,17 +58,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Sign in"/>
                                         <connections>
-                                            <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dmZ-SX-Nnx"/>
-                                            <segue destination="ceY-3A-vBC" kind="show" id="BhC-nZ-AgM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VS-rI-Lix">
-                                        <rect key="frame" x="0.0" y="181" width="288" height="30"/>
-                                        <color key="backgroundColor" red="0.1283414122" green="0.39956744280000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Sign Up"/>
-                                        <connections>
-                                            <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xiV-U1-YMC"/>
+                                            <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvn-To-iCw"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -93,7 +83,7 @@
         <!--Movie List-->
         <scene sceneID="G0D-rH-d8Q">
             <objects>
-                <viewController id="T60-VT-akU" customClass="MovieListViewController" customModule="CinePlay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieList" id="T60-VT-akU" customClass="MovieListViewController" customModule="CinePlay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TMF-n3-Eb4"/>
                         <viewControllerLayoutGuide type="bottom" id="3LO-53-sHB"/>
@@ -103,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Noa-vt-MFV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -223,7 +213,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cJ3-Pf-vta">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceY-3A-vBC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ceY-3A-vBC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QvC-0x-yZ3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -473,6 +463,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WNt-vG-8Ut"/>
+        <segue reference="glK-7o-QjY"/>
     </inferredMetricsTieBreakers>
 </document>
