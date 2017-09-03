@@ -13,6 +13,7 @@ import SwiftyJSON
 class MoviesAPI {
     
     static let MOVIES_URL = "https://my-json-server.typicode.com/wesleymuniz/mediaapi/db"
+    static let MOVIE_URL = "https://my-json-server.typicode.com/wesleymuniz/mediaapi/movies/"
     
     static func getMoviesJSON(completion:((_ success: Bool, _ result: [JSON]?)->Void)?) {
         
@@ -26,4 +27,16 @@ class MoviesAPI {
             }
         }
     }
+    
+    static func getMovieJSON(id: Int64, completion:((_ success: Bool, _ result: JSON?)->Void)?) {
+        let MOVIE_URL_ID = "\(MoviesAPI.MOVIE_URL)\(id)"
+        Alamofire.request(MOVIE_URL_ID).responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let movie = JSON(responseData.result.value!)
+                completion?(responseData.result.isSuccess, movie)
+            }
+        }
+    }
+    
+    
 }
