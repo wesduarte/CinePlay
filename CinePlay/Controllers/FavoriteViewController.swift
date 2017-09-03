@@ -14,7 +14,6 @@ class FavoriteViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var tableView: UITableView!
     
-    final let MOVIES_URL = "https://my-json-server.typicode.com/wesleymuniz/mediaapi/db"
     final let MOVIE_URL = "https://my-json-server.typicode.com/wesleymuniz/mediaapi/movies/"
     
     var favoriteMoviesArray = [JSON]()
@@ -59,29 +58,30 @@ class FavoriteViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FavoriteTableViewCell
         
-        let row = indexPath.row
-        let movie_dict =  self.favoriteMoviesArray[row]
+        setValuesToFavoriteTableViewCell(cell: cell, movie_dict: self.favoriteMoviesArray[indexPath.row])
+                
+        return cell
+    }
+    
+    func setValuesToFavoriteTableViewCell(cell: FavoriteTableViewCell, movie_dict: JSON) {
+        
         let title = movie_dict["title"].string!
-        cell.title.text = title
-        
         let subtitle = movie_dict["subtitle"].string!
-        cell.subtitle.text = subtitle
-        
         let duration = movie_dict["duration"].int!
-        cell.duration.text = "\(duration)min"
-        
         let sinopse = movie_dict["sinopse"].string!
-        cell.sinopse.text = sinopse
-        
         let thumb = movie_dict["thumb"].string!
+        
+        cell.title.text = title
+        cell.subtitle.text = subtitle
+        cell.duration.text = "\(duration)min"
+        cell.sinopse.text = sinopse
         cell.thumb.image = ImageHandler.convertURLToUIImage(url: thumb)
+        
         
         cell.parentViewController = self
         cell.parentTableView = self.tableView
         
         cell.id = movie_dict["id"].int64!
-                
-        return cell
     }
 
 }
