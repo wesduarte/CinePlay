@@ -16,20 +16,15 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var tableView: UITableView!
     
-    var moviesArray = [[String:AnyObject]]()
+    var moviesArray = [JSON]()
     
     func getMoviesJSON(){
         
         Alamofire.request(self.API_URL).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
-                
-                if let resData = swiftyJsonVar["movies"].arrayObject {
-                    self.moviesArray = resData as! [[String:AnyObject]]
-                }
-                if self.moviesArray.count > 0 {
-                    self.tableView.reloadData()
-                }
+                self.moviesArray = swiftyJsonVar["movies"].arrayValue
+                self.tableView.reloadData()
             }
         }
         
@@ -57,18 +52,19 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
-        setValuesToMovieCell(cell: cell, movie_dict: self.moviesArray[indexPath.row])
+        setValuesToMovieTableViewCell(cell: cell, movie_dict: self.moviesArray[indexPath.row])
         
         return cell
     }
     
-    func setValuesToMovieCell(cell: MovieTableViewCell, movie_dict: [String:AnyObject]) {
+    func setValuesToMovieTableViewCell(cell: MovieTableViewCell, movie_dict: JSON) {
         
-        let title = movie_dict["title"] as! String
-        let subtitle = movie_dict["subtitle"] as! String
-        let duration = String(format: "%@", movie_dict["duration"] as! CVarArg)
-        let sinopse = movie_dict["sinopse"] as! String
-        let thumb = movie_dict["thumb"] as! String
+        let title = movie_dict["title"].string!
+        let subtitle = movie_dict["subtitle"].string!
+        let duration = movie_dict["duration"].int!
+        let sinopse = movie_dict["sinopse"].string!
+        let thumb = movie_dict["thumb"].string!
+
         
         cell.title.text = title
         cell.subtitle.text = subtitle
@@ -78,7 +74,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         
         cell.parentTableView = self.tableView
-        cell.id = movie_dict["id"] as! Int64
+        cell.id = movie_dict["id"].int64!
         
         if CinePlayDB.instance.getFavorite(fmovie_id: cell.id) != nil {
             cell.favorite.isEnabled = false
