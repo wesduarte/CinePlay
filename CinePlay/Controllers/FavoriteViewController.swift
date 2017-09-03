@@ -80,6 +80,7 @@ class FavoriteViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.thumb.image = UIImage(data: data as! Data)
         }
         
+        cell.parentViewController = self
         cell.parentTableView = self.tableView
         
         cell.id = movie_dict["id"].int64!

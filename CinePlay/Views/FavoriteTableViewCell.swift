@@ -7,18 +7,17 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class FavoriteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var title: UILabel!
-    
     @IBOutlet weak var thumb: UIImageView!
-    
     @IBOutlet weak var subtitle: UILabel!
-    
     @IBOutlet weak var sinopse: UILabel!
     @IBOutlet weak var duration: UILabel!
     
+    var parentViewController: FavoriteViewController!
     var parentTableView: UITableView!
     
     var id: Int64!
@@ -33,12 +32,21 @@ class FavoriteTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-
+    
     
     @IBAction func deleteFavorite(_ sender: UIButton) {
         var delete = CinePlayDB.instance.deletefavorite(fmovie_id: self.id)
+        
+        for (index, favorite) in self.parentViewController.favoriteMoviesArray.enumerated() {
+            if favorite["id"].int64! == self.id {
+                self.parentViewController.favoriteMoviesArray.remove(at: index)
+                break
+            }
+        }
         self.parentTableView.reloadData()
-
+        
     }
+    
+    
     
 }
