@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Noa-vt-MFV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -199,7 +199,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Favorites" id="oLM-i5-t00">
                             <color key="tintColor" red="0.8524507455" green="1" blue="0.106931268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="h5W-or-d3y" kind="show" id="bhS-Nx-oSw"/>
+                                <segue destination="h5W-or-d3y" kind="presentation" id="LnB-27-Pgh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -333,7 +333,7 @@
                     <navigationItem key="navigationItem" title="Favorites" id="V0D-Ct-SvO">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="MMp-VE-Oyk">
                             <connections>
-                                <segue destination="T60-VT-akU" kind="show" id="WNt-vG-8Ut"/>
+                                <segue destination="ceY-3A-vBC" kind="show" id="rO2-7X-rUI"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="QNU-Ln-BZr"/>
@@ -463,7 +463,4 @@
             <point key="canvasLocation" x="2119" y="-544"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="glK-7o-QjY"/>
-    </inferredMetricsTieBreakers>
 </document>
