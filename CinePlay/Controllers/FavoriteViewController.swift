@@ -14,30 +14,21 @@ class FavoriteViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var tableView: UITableView!
     
-    final let MOVIE_URL = "https://my-json-server.typicode.com/wesleymuniz/mediaapi/movies/"
-    
     var favoriteMoviesArray = [JSON]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getMoviesJSON()
+        loadMovies()
     }
     
-    func getMoviesJSON(){
+    func loadMovies() {
         
         let favorites = CinePlayDB.instance.getFavorites();
         
         for favorite in favorites {
-            let MOVIE_URL_ID = "\(self.MOVIE_URL)\(favorite.movie_id)"
-            Alamofire.request(MOVIE_URL_ID).responseJSON { (responseData) -> Void in
-                if((responseData.result.value) != nil) {
-                    let resData = JSON(responseData.result.value!)
-                    self.favoriteMoviesArray.append(resData)
-                }
-
-                if self.favoriteMoviesArray.count > 0 {
-                    self.tableView.reloadData()
-                }
+            MoviesAPI.getMovieJSON(id: favorite.movie_id) { (success, result) in
+                self.favoriteMoviesArray.append(result!)
+                self.tableView.reloadData()
             }
         }
         
