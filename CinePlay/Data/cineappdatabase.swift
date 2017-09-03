@@ -55,6 +55,24 @@ class CinePlayDB {
         }
     }
     
+    func getFavorite(fmovie_id: Int64) -> Favorite? {
+        do {
+            var favorite_result : Favorite?
+            let favorite_consult = favorites.filter(movie_id == fmovie_id)
+            for favorite in try db!.prepare(favorite_consult) {
+                favorite_result = Favorite(
+                    id: favorite[id],
+                    movie_id: favorite[movie_id])
+                break
+            }
+            return favorite_result
+        } catch {
+            print("Select failed")
+            return nil
+        }
+
+    }
+    
     func getFavorites() -> [Favorite] {
         var favorites = [Favorite]()
         
