@@ -18,21 +18,18 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     var moviesArray = [JSON]()
     
-    func getMoviesJSON(){
+    func loadMoviesFromAPI(){
         
-        Alamofire.request(self.API_URL).responseJSON { (responseData) -> Void in
-            if((responseData.result.value) != nil) {
-                let swiftyJsonVar = JSON(responseData.result.value!)
-                self.moviesArray = swiftyJsonVar["movies"].arrayValue
-                self.tableView.reloadData()
-            }
+        MoviesAPI.getMoviesJSON() { (success, result) in
+            self.moviesArray = result!
+            self.tableView.reloadData()
         }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getMoviesJSON()
+        self.loadMoviesFromAPI()
         
     }
 
@@ -42,6 +39,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //self.tableView.reloadData()
         return self.moviesArray.count
     }
     
