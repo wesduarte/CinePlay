@@ -55,23 +55,26 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
+        setValuesToMovieCell(cell: cell, movie_dict: self.moviesArray[indexPath.row])
         
-        let row = indexPath.row
-        let movie_dict =  self.moviesArray[row]
+        return cell
+    }
+    
+    func setValuesToMovieCell(cell: MovieTableViewCell, movie_dict: [String:AnyObject]) {
+        
         let title = movie_dict["title"] as! String
-        cell.title.text = title
-        
         let subtitle = movie_dict["subtitle"] as! String
-        cell.subtitle.text = subtitle
-        
         let duration = String(format: "%@", movie_dict["duration"] as! CVarArg)
-        cell.duration.text = "\(duration)min"
-        
         let sinopse = movie_dict["sinopse"] as! String
+        let thumb = movie_dict["thumb"] as! String
+        
+        cell.title.text = title
+        cell.subtitle.text = subtitle
+        cell.duration.text = "\(duration)min"
         cell.sinopse.text = sinopse
         
-        let thumb = movie_dict["thumb"] as! String
         let imgURL = NSURL(string: thumb)
         if imgURL != nil {
             let data = NSData(contentsOf: (imgURL as? URL)!)
@@ -85,8 +88,6 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
             cell.favorite.isEnabled = false
             cell.favorite.isHidden = true
         }
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
