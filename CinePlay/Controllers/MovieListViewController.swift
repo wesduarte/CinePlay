@@ -78,6 +78,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
             cell.thumb.image = UIImage(data: data as! Data)
         }
         
+        cell.parentTableView = self.tableView
         cell.id = movie_dict["id"] as! Int64
         
         return cell

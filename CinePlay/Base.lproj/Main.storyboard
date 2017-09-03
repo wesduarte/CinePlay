@@ -173,6 +173,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="duration" destination="X84-UX-BIm" id="kkc-Cx-Id3"/>
+                                            <outlet property="favorite" destination="Umz-gX-uFl" id="RMz-YA-9VH"/>
                                             <outlet property="sinopse" destination="oPt-EZ-eTe" id="7X4-2Y-D7m"/>
                                             <outlet property="subtitle" destination="Lvb-9M-Qu2" id="lef-D2-btw"/>
                                             <outlet property="thumb" destination="VlX-mA-dqx" id="Emb-Oy-IWb"/>

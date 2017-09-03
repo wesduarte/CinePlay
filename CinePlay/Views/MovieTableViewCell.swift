@@ -18,12 +18,22 @@ class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sinopse: UILabel!
     @IBOutlet weak var duration: UILabel!
+    @IBOutlet weak var favorite: UIButton!
+    
+    var parentTableView: UITableView!
     
     var id: Int64!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let id = self.id
+        let table = self.parentTableView
+        /*
+        if CinePlayDB.instance.getFavorite(fmovie_id: id) != nil {
+            favorite.isEnabled = false
+            favorite.isHidden = true
+            self.parentTableView.reloadData()
+        }*/
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,6 +45,9 @@ class MovieTableViewCell: UITableViewCell {
     @IBAction func addFavorite(_ sender: UIButton) {
         
         var result = CinePlayDB.instance.addFavorite(fmovie_id: self.id)
+        favorite.isEnabled = false
+        favorite.isHidden = true
+        self.parentTableView.reloadData()
 
 
     }
