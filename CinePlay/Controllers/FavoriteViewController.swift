@@ -74,11 +74,7 @@ class FavoriteViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.sinopse.text = sinopse
         
         let thumb = movie_dict["thumb"].string!
-        let imgURL = NSURL(string: thumb)
-        if imgURL != nil {
-            let data = NSData(contentsOf: (imgURL as? URL)!)
-            cell.thumb.image = UIImage(data: data as! Data)
-        }
+        cell.thumb.image = ImageHandler.convertURLToUIImage(url: thumb)
         
         cell.parentViewController = self
         cell.parentTableView = self.tableView

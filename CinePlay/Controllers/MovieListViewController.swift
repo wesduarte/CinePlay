@@ -74,12 +74,8 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         cell.subtitle.text = subtitle
         cell.duration.text = "\(duration)min"
         cell.sinopse.text = sinopse
+        cell.thumb.image = ImageHandler.convertURLToUIImage(url: thumb)
         
-        let imgURL = NSURL(string: thumb)
-        if imgURL != nil {
-            let data = NSData(contentsOf: (imgURL as? URL)!)
-            cell.thumb.image = UIImage(data: data as! Data)
-        }
         
         cell.parentTableView = self.tableView
         cell.id = movie_dict["id"] as! Int64
