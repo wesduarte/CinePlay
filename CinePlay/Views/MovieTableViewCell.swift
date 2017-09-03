@@ -26,14 +26,6 @@ class MovieTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let id = self.id
-        let table = self.parentTableView
-        /*
-        if CinePlayDB.instance.getFavorite(fmovie_id: id) != nil {
-            favorite.isEnabled = false
-            favorite.isHidden = true
-            self.parentTableView.reloadData()
-        }*/
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

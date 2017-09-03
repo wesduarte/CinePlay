@@ -81,6 +81,11 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         cell.parentTableView = self.tableView
         cell.id = movie_dict["id"] as! Int64
         
+        if CinePlayDB.instance.getFavorite(fmovie_id: cell.id) != nil {
+            cell.favorite.isEnabled = false
+            cell.favorite.isHidden = true
+        }
+        
         return cell
     }
     
