@@ -7,9 +7,14 @@ CinePlay é uma aplicação que fornece uma lista de filmes, permite acesso à u
 
 - Opcional: É necessário ter o CocoaPods instalado. Caso não tenha, utilizar o comando abaixo para instalar.
 
- ```gem install cocoapods```
+- ```gem install cocoapods```
 
 1. Executar o comando ```pod install```.
 
 2. Abrir o projeto CinePlay.xcworkspace
 
+
+#### Logins
+
+- usuario: admin
+- password: admin

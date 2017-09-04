@@ -23,15 +23,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let USER_URL_ID = "\(self.USER_URL)\(username)"
         Alamofire.request(USER_URL_ID).responseJSON { (responseData) -> Void in
             let result = responseData.result
-            if((result.value) != nil) {
+            if (result.value != nil) {
                 let userDict = JSON(result.value!)
-                let remotePassword = userDict["password"].string!
-                if password == remotePassword {
-                    self.storeLoginDataInUserDefaults(username, password)
-                    self.presentMovieListScreen()
+                if !userDict.isEmpty {
+                    let remotePassword = userDict["password"].string!
+                    if password == remotePassword {
+                        self.storeLoginDataInUserDefaults(username, password)
+                        self.presentMovieListScreen()
+                    } else {
+                        self.wrongInputAlert(title:"Password Field", message: "Invalid Password")
+                    }
+                } else {
+                    self.wrongInputAlert(title:"Username Field", message: "Invalid Username")
                 }
             }
         }
+    }
+    
+    func wrongInputAlert (title:String, message:String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        //CREATING ON BUTTON
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print ("Close")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func presentMovieListScreen() {
