@@ -12,8 +12,6 @@ import SwiftyJSON
 
 class MovieListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    final let API_URL = "https://my-json-server.typicode.com/wesleymuniz/mediaapi/db"
-
     @IBOutlet weak var tableView: UITableView!
     
     var moviesArray = [JSON]()

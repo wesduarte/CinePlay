@@ -24,6 +24,7 @@
 		2B525A791F59AA170098E149 /* cineappdatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B525A781F59AA170098E149 /* cineappdatabase.swift */; };
 		2B61C6141F58BA6B008ECED1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDB4A8A1F57BD6F00CFE758 /* libsqlite3.0.tbd */; };
 		2B6521C61F5CA76700BB4968 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6521C51F5CA76700BB4968 /* ImageHandler.swift */; };
+		2B6521C81F5CD32E00BB4968 /* cineplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B6521C71F5CD32E00BB4968 /* cineplay.png */; };
 		9095F269B86D5AF22A1D44C6 /* Pods_CinePlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A342205C19CC9C5E4F5F92 /* Pods_CinePlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		2B525A731F59A9F30098E149 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		2B525A781F59AA170098E149 /* cineappdatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cineappdatabase.swift; path = Data/cineappdatabase.swift; sourceTree = "<group>"; };
 		2B6521C51F5CA76700BB4968 /* ImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageHandler.swift; path = Controllers/ImageHandler.swift; sourceTree = "<group>"; };
+		2B6521C71F5CD32E00BB4968 /* cineplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cineplay.png; path = CinePlay/Images/cineplay.png; sourceTree = "<group>"; };
 		2BDB4A8A1F57BD6F00CFE758 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2C220C02942B8D2441E658D4 /* Pods-CinePlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinePlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-CinePlay/Pods-CinePlay.release.xcconfig"; sourceTree = "<group>"; };
 		76A342205C19CC9C5E4F5F92 /* Pods_CinePlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinePlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 		2B311F1E1F53DA9100DC8B04 = {
 			isa = PBXGroup;
 			children = (
+				2B6521C91F5CD33500BB4968 /* Images */,
 				2B311F291F53DA9200DC8B04 /* CinePlay */,
 				2B311F3E1F53DA9200DC8B04 /* CinePlayTests */,
 				2B311F281F53DA9200DC8B04 /* Products */,
@@ -166,6 +169,14 @@
 				2B525A781F59AA170098E149 /* cineappdatabase.swift */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		2B6521C91F5CD33500BB4968 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2B6521C71F5CD32E00BB4968 /* cineplay.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		4ABFC1573B30492441D12718 /* Pods */ = {
@@ -272,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6521C81F5CD32E00BB4968 /* cineplay.png in Resources */,
 				2B311F351F53DA9200DC8B04 /* LaunchScreen.storyboard in Resources */,
 				2B311F321F53DA9200DC8B04 /* Assets.xcassets in Resources */,
 				2B311F301F53DA9200DC8B04 /* Main.storyboard in Resources */,
