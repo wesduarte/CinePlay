@@ -89,7 +89,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         movieDetailView.subtitleText = currentMovieCell.subtitle?.text
         movieDetailView.sinopseText = currentMovieCell.sinopse?.text
         movieDetailView.thumbImage = currentMovieCell.thumb?.image
-        
+        movieDetailView.durationText = currentMovieCell.duration?.text
         
         self.navigationController?.pushViewController(movieDetailView, animated: true)
     }
